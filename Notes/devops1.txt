@@ -1,0 +1,51 @@
+CODING 
+
+PUPPET 
+1.RESOURCES -- every action (package , file , service , exec , 50+ resources 
+2.MODULES
+
+WHY IT IS TOOL 
+Integration and parallelism 
+
+why we need puppet db servers
+ 
+vi test.pp
+
+package { 'tomcat':
+   ensure => install (present)
+        }
+
+solaris :pkgadd tomcat 
+linux : yum tomcat
+window : msi tomcat
+
+mac : run as file
+
+facter is command to gather syst info 
+
+puppet parser validate test.pp --------> parser to check code is proper 
+
+puppet apply test.pp -v --noop   -------------> to check we can impliment code properly 
+
+-v -- verbose mode 
+--noop -- dry run 
+
+puppet apply test.pp -v 
+
+
+
+1.setting up
+2.writing code
+3.confoguring clients 
+4.implimenting code
+
+
+puppet describe --list ---> to list available resources
+puppet describe package screen ------> it will set of command how it is installed ( you can use code and install other package) 
+you should know args to use for resources 
+
+
+if describe is not working ( use resource ) 
+
+
+present , absent , install , purged , latest ( args for puppet ) 

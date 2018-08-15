@@ -1,0 +1,26 @@
+ssh -i <key.pem> centos@<publicIP>
+
+https://www.tecmint.com/install-puppet-in-centos/
+
+ puppet resource --type
+ puppet config print
+puppet config 
+
+    2  cd /root
+    3  cd puppetcodes/
+    4  ls
+    5  vi puppetfirst.pp
+    6  puppet parser validate puppetfirst.pp
+    7  vi puppetfirst.pp
+    8*
+    9  puppet apply puppetfirst.pp -v -noop
+   10  puppet apply puppetfirst.pp -v --noop
+   11  vi puppetfirst.pp
+   12  puppet parser validate puppetfirst.pp
+   13  puppet apply puppetfirst.pp -v --noop
+   14  vi puppetfirst.pp
+   15  puppet parser validate puppetfirst.pp
+   16  puppet apply puppetfirst.pp -v --noop
+   17  vi puppetfirst.pp
+   18  puppet apply puppetfirst.pp -v
+   19  history

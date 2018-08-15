@@ -1,0 +1,140 @@
+indside envitonrments creste files prod,preprod for creating groups
+
+puppet files , classes ( single and multiple )and modules 
+
+resources 
+
+class package_installation {
+   $pkgname = { 'screen' , 'strace' , 'sudo' }
+
+
+   package { $phgname:
+
+      ensure => present,
+      }
+
+}
+include package_installation
+
+
+[root@ip-172-31-27-167 puppetcodes]# history
+    1  cd /rrot
+    2  cd /root
+    3  cd puppetcodes/
+    4  ls
+    5  vi puppetfirst.pp
+    6  puppet parser validate puppetfirst.pp
+    7  vi puppetfirst.pp
+    8  puppet apply puppetfirst.pp -v -noop
+    9  puppet apply puppetfirst.pp -v --noop
+   10  vi puppetfirst.pp
+   11  puppet parser validate puppetfirst.pp
+   12  puppet apply puppetfirst.pp -v --noop
+   13  vi puppetfirst.pp
+   14  puppet parser validate puppetfirst.pp
+   15  puppet apply puppetfirst.pp -v --noop
+   16  vi puppetfirst.pp
+   17  puppet apply puppetfirst.pp -v
+   18  history
+   19  yum installl --noop
+   20  sudo /root
+   21  cd /rrot
+   22  cd /root
+   23  mkdir puppetcodes
+   24  cd puppetcodes
+   25  vi puppetfirst.pp
+   26  yum -repolist
+   27  yum --repolist
+   28  yum -repolist
+   29  yum repolist
+   30  clear
+   31  sudo rpm -ivh http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
+   32  yum install puppet-server
+   33  puppet resource package puppet-server ensure=latest
+   34  sudo puppet resource package puppet-server ensure=latest
+   35  /etc/init.d/puppetmaster restart
+   36  cd /etc/init.d
+   37  ls -al
+   38  ls -a
+   39  ls -ll
+   40  puppet -version
+   41  puppet --version
+   42  cd /etc/puppet
+   43  ls
+   44  find / -name package.rb
+   45  cd /usr/share/ruby/vendor_ruby/puppet/provider
+   46  ls
+   47  top
+   48  cd /root
+   49  ls
+   50  cd puppetcodes/
+   51  ls
+   52  vi puppetclass.pp
+   53  puppet parser validate puppetclass.pp
+   54  vi puppetclass.pp
+   55  vi puppetfirst.pp
+   56  vi puppetclass.pp
+   57  puppet parser validate puppetclass.pp
+   58  vi puppetclass.pp
+   59  puppet parser validate puppetclass.pp
+   60  puppet apply puppetclass.pp -v -noop
+   61  puppet apply puppetclass.pp -v --noop
+   62  puppet apply puppetclass.pp -v
+   63  cat puppetclass.pp
+   64  history
+
+
+class package_installation {
+   if $::osfamily == "Redhat"{
+      $pkgname = [ "screen" , "strace" , "sudo" ]
+}
+
+   elseif $::osfamily == "Debian"{
+      $pkgname = [ "screen" , "strace" , "sudo" ]
+      } else {
+      $pkgname = [ "screen" ]
+    }
+
+package { $pkgname:
+   ensure => present'
+     }
+}
+include package_installation
+
+
+   65  cd /root
+   66  ls
+   67  cd puppetcodes/
+   68  ls
+   69  ls -a
+   70  git init
+   71  git add .
+   72  ls
+   73  git commit - m "Addiding puppet playbooks for class , installing basic package and installing package on os family"
+   74  git commit -m "Addiding puppet playbooks for class , installing basic package and installing package on os family"
+   75  git config --global use.email "vijayandra.patil@gmail.com"
+   76  git push origin master
+   77  git push -u origin  master
+   78  git push -u origin master
+   79  git remote add https://github.com/PatilVijayandra/Patil.git
+   80  git remote add origin https://github.com/PatilVijayandra/Patil.git
+   81  git push -u origin master
+   82  git clone https://github.com/PatilVijayandra/Patil.git
+   83  ls
+   84  mv puppetfirst.pp ./Patil/
+   85  ls
+   86  cd Patil/
+   87  ls
+   88  git add .
+   89  git commit -m "Adding firstb puppet playbook"
+   90  git push origin master
+   91  cd ..
+   92  ls
+   93  mv *.pp ./Patil/
+   94  ls
+   95  cd Patil/
+   96  ls
+   97  git add .
+   98  git commit -m "Adding playbooks for class and osfamily cases"
+   99  ls
+  100  history

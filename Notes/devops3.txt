@@ -1,0 +1,13 @@
+wifi password : 
+
+git remote -v --- to see git remo connected 
+
+echo "# Patil13Aug" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/PatilVijayandra/Patil13Aug.git
+git push -u origin master
+git show/status
+
+ec2-18-217-25-221.us-east-2.compute.amazonaws.com

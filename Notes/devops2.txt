@@ -1,0 +1,27 @@
+Foreman -- Open Source GUI tool
+
+need to learn volume and mounting 
+
+virtual puppet server NAME  
+
+Puppet set up architecture 
+
+PUPPET SERVER AND AGENT 
+
+
+PUPPET SERVER
+------------------------
+
+/ETC/PUPPETLABS/CONFIG/PUPPET.CONF
+
+PUPPETSERVER = VP SERVER NAME
+
+SYSTEMCTL START PUPPET  
+PUPPET CERT LIST 
+
+PUPPET CERT SIGN < >  
+
+PUPPET CONFIG PRINT
+
+
+ 
