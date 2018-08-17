@@ -1,0 +1,10 @@
+cd /u01/Jetty_Integ_3.9/jetty-distribution-9.4.5.v20170502/opt
+
+zip -r eka-gui.war.zip eka-gui.war/*
+zip -r cac-signin.war.zip cac-signin.war/*
+zip -r cac-security.war.zip cac-security.war/*
+zip -r eka-admin.war.zip eka-admin.war/*
+zip -r eka-status-manager.war.zip eka-status-manager.war/*
+
+sshpass -f "password stored file path" scp /u01/Jetty_Integ_3.9/jetty-distribution-9.4.5.v20170502/opt/*.zip smartuser@192.168.1.63:/u02/Jetty_QA3.9/jetty-distribution-9.4.5.v20170502/opt/
+
