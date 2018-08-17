@@ -1,22 +1,22 @@
 class ntp {
 
-   $pkgname = ntp ,
-   $conifg = /etc/ntp.config ,
-   $drift = /tmp/ntp/drift ,
+   $pkgname = ntp 
+   $conifg = "/etc/ntp.config" 
+   $drift = "/tmp/ntp/drift" 
    $service = ntpd
 
-   package { "$pkgname":
+   package { $pkgname:
       ensure => installed,
       before => File ["$config"]
       }
 
-   file { "$config":
+   file { $config:
      enrure => present,
      content => template ("ntp.config.erb")
      before => Service["nat"]
      }
     
-   Service { "$service":
+   service { $service:
       ensure => runnning,
       enable => true
       }
