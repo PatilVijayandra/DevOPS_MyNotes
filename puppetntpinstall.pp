@@ -1,8 +1,8 @@
 class ntp {
 
    $pkgname = ntp 
-   $conifg = "/etc/ntp.config" 
-   $drift = "/tmp/ntp/drift" 
+   $conifg = "/etc/ntp.conf" 
+   $drift = "/var/lib/ntp1/drift" 
    $service = ntpd
 
    package { $pkgname:
@@ -11,9 +11,9 @@ class ntp {
       }
 
    file { $config:
-     enrure => present,
-     content => template ("ntp.config.erb")
-     before => Service["nat"]
+     ensure => present,
+     content => template ("/root/puppetcodes/DevOPs_Class/NTP/ntp.conf.erb")
+     before => Service["$service"]
      }
     
    service { $service:
