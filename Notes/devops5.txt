@@ -138,3 +138,5 @@ include package_installation
    98  git commit -m "Adding playbooks for class and osfamily cases"
    99  ls
   100  history
+
+https://github.com/Devops-Grp/jorritfolmer/puppet-splunk
